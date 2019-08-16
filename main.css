@@ -1,0 +1,157 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--pink: #ffd6eb;
+	--gray: #cfccd2;
+	--font-sans: "PT Sans", sans-serif;
+	--font-serif: "PT Serif", serif;
+}
+
+html {
+	margin: 0 auto;
+	background: var(--pink);
+}
+
+body {
+	max-width: 64rem;
+	margin: 0 auto;
+	font-size: 20px;
+	color: #333;
+	line-height: 1.4;
+	padding: 1em;
+	font-family: var(--font-sans);
+}
+
+main {
+	border: 0.5rem solid var(--gray);
+	border-top: 0;
+	padding: 2em;
+	background: #fff;
+}
+
+h1,
+h2,
+h3 {
+	margin-top: 0;
+	font-family: var(--font-serif);
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.intro {
+	text-align: center;
+	font-size: 2em;
+	font-family: var(--font-serif);
+	position: relative;
+}
+
+.intro p {
+	border: 0.25rem solid #333;
+	font-size: 1.5rem;
+	padding: 1rem;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 80%;
+	transform: translateX(-50%);
+	background: hsla(0, 0%, 100%, 0.75);
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+	border-bottom: 0.25rem solid #333;
+	margin: 0 auto 1rem;
+	padding: 1rem 0;
+}
+
+.wave {
+	animation-name: wave;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	display: inline-block;
+	transform-origin: 80% 80%;
+}
+
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(-10deg);
+	}
+	20% {
+		transform: rotate(15deg);
+	}
+	30% {
+		transform: rotate(-10deg);
+	}
+	40% {
+		transform: rotate(9deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+/* .accordion component */
+.accordion {
+	position: relative;
+}
+
+.accordion__title {
+	margin: 0;
+	background: #efefef;
+	border: 1px solid var(--gray);
+	padding: 1em 2em;
+	cursor: pointer;
+}
+.accordion__title::before {
+	content: "-";
+	position: absolute;
+	left: 0.75em;
+}
+.accordion__contents {
+	border: 1px solid var(--gray);
+	border-top: 0;
+	padding: 2rem;
+}
+
+.accordion.is-closed .accordion__contents {
+	display: none;
+}
+.accordion.is-closed .accordion__title::before {
+	content: "+";
+}
+
+.make-it-pop {
+	font-size: 2rem;
+	background-color: yellow;
+}
+
+.btn {
+	font-size: 2rem;
+	color: #333;
+	border: 0.25rem solid #333;
+	padding: 1.25rem 2rem 1rem;
+	text-transform: uppercase;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.btn:hover {
+	background: #333;
+	color: #fff;
+}
+
+footer p {
+	text-align: center;
+}
